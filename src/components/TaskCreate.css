@@ -1,0 +1,26 @@
+.task-create{
+    width: 450px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form-label{
+    margin-block:10px;
+}
+.form-input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.form-button{
+    margin-block: 10px;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
