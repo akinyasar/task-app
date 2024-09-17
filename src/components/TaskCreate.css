@@ -24,3 +24,11 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.task-edit{
+    width: 100%;
+}
+.update-button{
+    background-color: blueviolet !important;
+    border: 1px solid blueviolet !important;
+}

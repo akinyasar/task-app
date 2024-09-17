@@ -15,11 +15,30 @@ function App() {
       ...taskArray,
     ]);
   };
+  const deleteTaskById = (id) => {
+    const deletedTaskArray = taskArray.filter((task) => {
+      return task.id !== id;
+    });
+    setTaskArray(deletedTaskArray);
+  };
+  const updateTaskById = (id, updatedTitle, updatedTaskDesc) => {
+    const updatedTaskArray = taskArray.map((task) => {
+      if (task.id === id) {
+        return { id, title: updatedTitle, taskDesc: updatedTaskDesc };
+      }
+      return task;
+    });
+    setTaskArray(updatedTaskArray);
+  };
   return (
     <div className="App">
       <TaskCreate onCreate={createTask} />
       <h1>Görevler</h1>
-      <TaskList taskArray={taskArray} />
+      <TaskList
+        taskArray={taskArray}
+        onDelete={deleteTaskById}
+        onUpdate={updateTaskById}
+      />
     </div>
   );
 }
