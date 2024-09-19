@@ -1,5 +1,14 @@
 {
-    "tasks":[
-        
-    ]
+  "tasks": [
+    {
+      "title": "Title Güncellemesi",
+      "taskDesc": "anasayfa title güncellemesi yapılacak",
+      "id": "92f9"
+    },
+    {
+      "title": "Meta tag eklenmesi",
+      "taskDesc": "Listeleme sayfasına meta tag eklenecek",
+      "id": "af90"
+    }
+  ]
 }
