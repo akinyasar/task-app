@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./TaskCreate.css";
-function TaskCreate({ onCreate, task, editMode, onUpdate }) {
+import { useContext } from "react";
+import TaskContext from "../context/task";
+
+function TaskCreate({ task, editMode, onUpdate }) {
+  const { createTask } = useContext(TaskContext);
   const [title, setTitle] = useState(task ? task.title : "");
   const [taskDesc, setTaskDesc] = useState(task ? task.taskDesc : "");
 
@@ -9,7 +13,7 @@ function TaskCreate({ onCreate, task, editMode, onUpdate }) {
     if (editMode) {
       onUpdate(task.id, title, taskDesc);
     } else {
-      onCreate(title, taskDesc);
+      createTask(title, taskDesc);
     }
     clearForm();
   };
